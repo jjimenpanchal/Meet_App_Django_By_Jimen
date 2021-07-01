@@ -1,0 +1,17 @@
+{% extends 'meet\base\base.html' %} 
+{% load static %} 
+{% block title %} All Meets {% endblock %} 
+{% block site_css %}<link rel="stylesheet" href="{% static 'meet/styles/all-meets.css'%}"/>{%endblock %} 
+{% block main_heading %} We Got Great Meets Coming Up!!{%endblock%} 
+{% block header_content %}<p>Find the one that best suits your needs!!</p>{% endblock %} 
+{% block body %}
+<section>
+  <h2>Upcoming Meets</h2>
+  <ol>
+    {% for item in meets %} 
+    {% include 'meet/includes/meet-item.html' with title=item.title image=item.image.url organizer_email=item.organizer_email location=item.location.name slug=item.slug %}
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}
+<!-- {% comment %} F:\Learn_django\Django_Youtube_Acadmind\Project\django_site\meet\templates\meet\base\base.html {% endcomment %} -->
