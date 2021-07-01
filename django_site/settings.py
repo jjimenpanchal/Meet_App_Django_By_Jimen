@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%v1snk%yd0__2#r=-_6+u8uv4&)0q6moqu5)+zs4x8t9rplibh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["meetapp-jimen.herokuapp.com"]
 
 
 # Application definition
